@@ -20,7 +20,7 @@ Our Value
 <nav class="py-3 flex justify-center text-sm lg:text-lg items-center mx-auto lg:py-4">
   <ul class="flex items-center flex-wrap">
     <li>
-      <a href="index.html" class="text-pri-100 hover:text-pri-200 font-semibold md:font-bold">Home</a>
+      <a href="{{URL::to('/')}}" class="text-pri-100 hover:text-pri-200 font-semibold md:font-bold">Home</a>
       <span class="px-2">
         <i style="font-size: 10px;" class="fas fa-chevron-right text-gray-500"></i>
       </span>

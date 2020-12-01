@@ -2,15 +2,15 @@
   <div class="container mx-auto max-w-screen-xl">
     <div x-data="{ open: false }" class="flex flex-col px-4 md:px-8 xl:mx-10 lg:px-12 xl:px-16 lg:items-center lg:justify-between lg:flex-row">
       <div class="relative flex flex-row items-center justify-between">
-        <div id="logo-nav" class="w-24 md:w-32 top-0">
-
+        <div id="logo-nav" class="w-20 md:w-24 lg:w-32 top-0">
           <a href="{{URL::to('/')}}">
             <img id="img-logo" class="w-auto lg:p-3 p-2" src="{{ asset('storage/'.setting('site.logo')) }}">
           </a>
         </div>
-        <div id="nama-sekolah" class="hidden lg:relative xl:-ml-10 lg:-ml-2 text-left leading-tight absolute ml-20">
-          <h1 class="tracking-wider lg:tracking-wider text-md font-bold uppercase">SD Marsudirini</h1>
-          <span class="text-sm lg:text-md font-semibold">Gedangan Semarang</span>
+        <div id="nama-sekolah" class="hidden lg:relative mx-auto pr-8 lg:mx-0 lg:pr-0 lg:-ml-12">
+          <a href="{{URL::to('/')}}">
+            <img class="w-40 lg:w-32 xl:w-40" src="{{ asset('storage/'.setting('site.image_navbar_title')) }}" alt="">
+          </a>
         </div>
         <button class="lg:hidden rounded-lg focus:outline-none focus:shadow-outline" @click="open = !open">
           <svg fill="currentColor" viewBox="0 0 20 20" class="w-6 h-6">

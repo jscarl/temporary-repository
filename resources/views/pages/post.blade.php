@@ -5,7 +5,7 @@ Post
 
 @section('content')
 <!-- Breadcumb Section -->
-<section style="background-image: url('{{Voyager::image($post->image)}}'); transform: translateZ(-1px); overflow:hidden" class="breadcumb relative bg-blue-500 bg-center md:bg-bottom lg:bg-fixed bg-cover bg-no-repeat overflow-x-hidden flex justify-center items-center">
+<section style="background-image: url('{{Voyager::image($post->image)}}'); overflow:hidden" class="breadcumb relative bg-blue-500 bg-bottom lg:bg-fixed bg-cover bg-no-repeat overflow-x-hidden flex justify-center items-center">
   <span class="absolute w-auto inset-0 shadow-inner bg-gradient-to-bl from-pri-100 via-pri-200 to-teal-500 opacity-75"></span>
 </section>
 <!-- End of Breadcumb -->
@@ -17,7 +17,7 @@ Post
     </div>
     <div class="grid grid-cols-1 lg:grid-cols-3 text-base px-10 md:px-12 lg:px-12 xl:ml-16 -mt-56 lg:mt-0">
       <div class="w-full grid col-span-2 xl:-mt-56 xl:bg-white -mt-2">
-        <article class="flex flex-col xl:pt-10 xl:px-10 w-full">
+        <div class="flex flex-col xl:pt-10 xl:px-10 w-full">
           <div class="md:bg-white flex flex-col justify-start">
             <h1 class="text-2xl md:text-3xl font-bold text-gray-900 pb-4 capitalize">{{$post->title}}</h1>
             <div class="flex text-sm text-gray-700 pb-3">
@@ -52,10 +52,11 @@ Post
             </nav>
             <img class="pb-8" src="{{Voyager::image($post->image)}}" alt="">
             {{-- <h1 class="text-2xl font-bold pb-3">Introduction</h1> --}}
-            {!! $post->body !!}
+            <article class="prose prose-sm sm:prose lg:prose-sm xl:prose-lg mx-auto md:max-w-none">
+              {!! $post->body !!}
+            </article>
           </div>
-
-        </article>
+        </div>
         <div class="xl:pl-10 xl:pr-6">
           <div class="w-full flex pt-6 xl:pr-6">
             @foreach ($suggestions->take(2) as $item)

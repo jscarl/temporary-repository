@@ -17,13 +17,13 @@ Home
           <div class="mb-4 md:mb-6 h-42 lg:h-48 xl:h-56 w-auto overflow-hidden">
             <img class="relative object-cover object-top w-full h-full" src="{{ Voyager::image($headlines->image) }}" alt="{{$headlines->title}}">
           </div>
-          <a href="{{AppAlbum::getSlug('posts', $headlines->slug)}}">
+          <a href="{{AppAlbum::getSlug('page', $headlines->slug)}}">
             <h2 class="mt-6 lg:mt-0 text-lg lg:text-xl text-pri-100 font-semibold">{{ $headlines->title }}</h2>
           </a>
           <p class="mt-2 mb-4 text-gray-700 text-sm truncate-3-lines">
             {{$headlines->excerpt}}
           </p>
-          <a class="text-sm text-gray-700 hover:text-pri-200" href="{{AppAlbum::getSlug('posts',$headlines->slug)}}">Read More</a>
+          <a class="text-sm text-gray-700 hover:text-pri-200" href="{{AppAlbum::getSlug('page',$headlines->slug)}}">Read More</a>
         </div>
       </div>
       <div class="flex relative flex-shrink-0 min-w-0 break-words sm:rounded-r-xl bg-pri-100 w-full mb-8 shadow-xl">
