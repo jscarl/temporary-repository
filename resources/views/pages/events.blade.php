@@ -41,7 +41,7 @@ Daftar Semua Event
             <img class="object-cover lg:h-48 h-56 w-full bg-center" src="{{Voyager::image($event->thumbnail('medium'))}}" alt="{{$event->title}}">
           </a>
           <div class="flex flex-wrap p-5">
-            <a href="">
+            <a href="{{AppAlbum::getSlug('events', $event->slug)}}">
               <h1 class="text-pri-100 font-semibold pb-3 capitalize">{{$event->title}}</h1>
             </a>
             <p class="truncate-5-lines text-sm text-gray-700">{{ $event->excerpt }}</p>
