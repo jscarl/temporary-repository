@@ -27,40 +27,39 @@ Home
         </div>
       </div>
       <div class="flex relative flex-shrink-0 min-w-0 break-words sm:rounded-r-xl bg-pri-100 w-full mb-8 shadow-xl">
-        <div class="">
-          <div class="p-8 flex-auto text-white">
-            <h6 class="mb-6 text-xl font-semibold">Acara yang Akan Datang</h6>
-            <div>
-              <ul class="mt-5">
-                @foreach($last_event as $event)
+        <div class="p-8 flex-auto text-white">
+          <h6 class=" text-xl font-semibold">Acara yang Akan Datang</h6>
+          <div class="flex">
 
-                <li class="mt-6">
-                  <h5 class="text-md font-semibold">{{$event->title}}</h5>
-                  {{-- <h5 class="text-md font-semibold">Contoh Nama Event</h5> --}}
-                  <div class="mt-1 flex items-center text-sm opacity-75">
-                    <span>
-                      <i class="far fa-clock"></i>
-                    </span>
-                    <span class="ml-2">
-                      <p>{{date('d F Y', strtotime($event->event_date))}}</p>
-                      {{-- <p>22 November 2020</p> --}}
-                    </span>
-                  </div>
-                  <div class="mt-1 flex items-start text-sm opacity-75">
-                    <span>
-                      <i class="fas fa-map-marker-alt"></i>
-                    </span>
-                    <span class="ml-3">
-                      {!! $event->location !!}
-                      {{-- Tempat Event --}}
-                    </span>
-                  </div>
-                  <a href="#" class="w-auto text-center text-sm bg-transparent hover:bg-pri-200 text-white font-semibold hover:text-white p-2 border border-white hover:border-transparent rounded inline-block mt-4 cursor-pointer">Selengkapnya</a>
-                </li>
-                @endforeach
-              </ul>
-            </div>
+            <ul class="mt-5">
+              @foreach($last_event as $event)
+
+              <li class="mt-6 mb-6">
+                <h5 class="text-md font-semibold">{{$event->title}}</h5>
+                {{-- <h5 class="text-md font-semibold">Contoh Nama Event</h5> --}}
+                <div class="mt-1 flex items-center text-sm opacity-75">
+                  <span>
+                    <i class="far fa-clock"></i>
+                  </span>
+                  <span class="ml-2">
+                    <p>{{date('d F Y', strtotime($event->event_date))}}</p>
+                    {{-- <p>22 November 2020</p> --}}
+                  </span>
+                </div>
+                <div class="mt-1 flex items-start text-sm opacity-75">
+                  <span>
+                    <i class="fas fa-map-marker-alt"></i>
+                  </span>
+                  <span class="ml-3">
+                    {!! $event->location !!}
+                    {{-- Tempat Event --}}
+                  </span>
+                </div>
+              </li>
+              @endforeach
+            </ul>
           </div>
+          <a href="#" class="w-auto text-center text-sm bg-transparent hover:bg-pri-200 text-white font-semibold hover:text-white p-2 border border-white hover:border-transparent rounded inline-block mt-4 cursor-pointer">Selengkapnya</a>
         </div>
       </div>
     </div>
@@ -78,7 +77,7 @@ Home
   </div>
   <div class="flex flex-col md:flex-row items-center justify-center text-lg font-semibold text-pri-100" data-aos="zoom-in">
     <div class="text-center lg:px-10 md:px-5">
-      <a href="{{URL::to('/values#empati')}}">
+      <a href="{{URL::to('/page/values#empati')}}">
         <svg class="icon w-20 md:w-16">
           <use xlink:href="{{asset("images/svg/sprite.svg#Empati")}}" />
         </svg>
@@ -86,7 +85,7 @@ Home
       </a>
     </div>
     <div class="text-center lg:px-10 md:px-5">
-      <a href="{{URL::to('/values#komunikatif')}}">
+      <a href="{{URL::to('/page/values#komunikatif')}}">
         <svg class="icon w-20 md:w-16 mx-auto">
           <use xlink:href="{{asset("images/svg/sprite.svg#Komunikatif")}}" />
         </svg>
@@ -94,7 +93,7 @@ Home
       </a>
     </div>
     <div class="text-center lg:px-10 md:px-5">
-      <a href="{{URL::to('/values#sportif')}}">
+      <a href="{{URL::to('/page/values#sportif')}}">
         <svg class="icon w-20 md:w-16">
           <use xlink:href="{{asset("images/svg/sprite.svg#Sportif")}}" />
         </svg>
@@ -102,7 +101,7 @@ Home
       </a>
     </div>
     <div class="text-center lg:px-10 md:px-5">
-      <a href="{{URL::to('/values#inovatif')}}">
+      <a href="{{URL::to('/page/values#inovatif')}}">
         <svg class="icon w-20 md:w-16">
           <use xlink:href="{{asset("images/svg/sprite.svg#Inovasi")}}" />
         </svg>
@@ -110,7 +109,7 @@ Home
       </a>
     </div>
     <div class="text-center lg:px-10 md:px-5">
-      <a href="{{URL::to('/values#simpati')}}">
+      <a href="{{URL::to('/page/values#simpati')}}">
         <svg class="icon w-20 md:w-16">
           <use xlink:href="{{asset("images/svg/sprite.svg#Simpati")}}" />
         </svg>
@@ -157,28 +156,31 @@ Home
 <!-- Pengumuman -->
 <section class="container mx-auto w-10/12 lg:w-full lg:px-16 xl:px-40 2xl:px-64 py-24">
   <div class="grid grid-cols-1 md:grid-cols-2 gap-6 overflow-x-hidden">
+    @foreach($pengumuman as $x)
     <div class="bg-pri-100 md:col-span-2 shadow-xl text-white" data-aos="fade-down">
       <div class="flex flex-wrap lg:flex-no-wrap">
         <img class="h-56 lg:h-64 w-full lg:w-auto object-cover" src="https://img.freepik.com/free-vector/megaphone-announcement-with-paper-art-style_67590-497.jpg?size=626&ext=jpg" alt="">
         <div class="flex">
           <div class="p-8">
-            <h1 class="font-semibold text-2xl lg:text-4xl">Pengumuman</h1>
+            <h1 class="font-semibold text-2xl lg:text-4xl">{{$x->title}}</h1>
             <div class="flex items-center text-sm opacity-75">
               <span>
                 <i class="far fa-calendar-alt"></i>
               </span>
               <span class="ml-3">
-                <p>22 November 2020</p>
+                {{-- <p>22 November 2020</p> --}}
+                <p>{{date('d F Y', strtotime($x->created_at))}}</p>
               </span>
             </div>
             <span>
-              <p class="mt-2 truncate-3-lines text-sm text-white">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Exercitationem doloribus eveniet deserunt debitis, quos delectus inventore veniam voluptas eos, itaque, ut provident. Dolorum sit quibusdam, repellat impedit et cupiditate autem.</p>
+              <p class="mt-2 truncate-3-lines text-sm text-white">{{$x->excerpt}}</p>
             </span>
-            <a class="pt-5 inline-block hover:text-pri-200 text-sm" href="#">Read More</a>
+            <a class="pt-5 inline-block hover:text-pri-200 text-sm" href="{{AppAlbum::getSlug('posts', $x->slug)}}">Read More</a>
           </div>
         </div>
       </div>
     </div>
+    @endforeach
     @foreach($pages as $page)
 
     @if ($loop->odd)

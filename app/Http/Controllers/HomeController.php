@@ -48,6 +48,14 @@ class HomeController extends Controller
             ->take(2)
             ->get();
 
+        $cat_info = DB::table('categories')
+            ->where('slug', '=', 'berita-sekolah')
+            ->first();
+        $pengumuman = Post::where('category_id', $cat_info->id)
+            ->latest()
+            ->take(1)
+            ->get();
+
         $albums = Album::where([
             ['status', '=', 'PUBLISHED']
         ])->latest()->take(3)->get();
@@ -59,6 +67,7 @@ class HomeController extends Controller
             'last_event' => $events,
             'albums' => $albums,
             'pages' => $page,
+            'pengumuman' => $pengumuman
         ]);
     }
 
