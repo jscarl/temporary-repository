@@ -35,7 +35,9 @@ Home
               @foreach($last_event as $event)
 
               <li class="mt-6 mb-6">
-                <h5 class="text-md font-semibold">{{$event->title}}</h5>
+                <a href="{{AppAlbum::getSlug('events', $event->slug)}}">
+                  <h5 class="text-md font-semibold">{{$event->title}}</h5>
+                </a>
                 {{-- <h5 class="text-md font-semibold">Contoh Nama Event</h5> --}}
                 <div class="mt-1 flex items-center text-sm opacity-75">
                   <span>
@@ -59,7 +61,7 @@ Home
               @endforeach
             </ul>
           </div>
-          <a href="#" class="w-auto text-center text-sm bg-transparent hover:bg-pri-200 text-white font-semibold hover:text-white p-2 border border-white hover:border-transparent rounded inline-block mt-4 cursor-pointer">Selengkapnya</a>
+          <a href="{{URL::to('/events')}}" class="w-auto text-center text-sm bg-transparent hover:bg-pri-200 text-white font-semibold hover:text-white p-2 border border-white hover:border-transparent rounded inline-block mt-4 cursor-pointer">Selengkapnya</a>
         </div>
       </div>
     </div>

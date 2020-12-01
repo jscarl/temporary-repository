@@ -6,8 +6,8 @@ use App\Models\Album;
 use App\Models\Events;
 use App\Models\Post;
 use Illuminate\Http\Request;
+use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\DB;
-use TCG\Voyager\Models\Page;
 
 class HomeController extends Controller
 {
@@ -33,12 +33,13 @@ class HomeController extends Controller
             ->get();
         $items = menu('guest', '_json');
         $events = Events::where([
-            ['headline', '=', '1'],
+            ['event_date', '>', Carbon::now()->toDateString()],
             ['status', '=', 'PUBLISHED']
         ])
-            ->latest()
             ->take(2)
             ->get();
+
+        // var_dump(Carbon::now()->toDateString());
 
         $cat_page = DB::table('categories')
             ->where('slug', '=', 'halaman')
