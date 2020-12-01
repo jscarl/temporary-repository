@@ -1,0 +1,50 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+body {
+    background-color: #f0f8ff;
+}
+
+.cover {
+    border-bottom-left-radius: 130px;
+}
+
+.breadcumb {
+    height: 50vh;
+}
+
+.bg-blue-teal-gradient {
+    background: rgb(49, 130, 206);
+    background: linear-gradient(
+        90deg,
+        rgba(49, 130, 206, 0.7) 0%,
+        rgba(56, 178, 172, 0.7) 100%
+    );
+}
+
+@media (min-width: 1024px) {
+    .cover {
+        border-bottom-left-radius: 256px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .hero {
+        height: 75vh;
+    }
+
+    .breadcumb {
+        height: 35vh;
+    }
+}
+
+#navbar {
+    transition: all 0.3s ease;
+}
+
+.icon {
+    fill: #53cde2;
+}
