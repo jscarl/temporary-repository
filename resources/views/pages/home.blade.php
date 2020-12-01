@@ -159,7 +159,7 @@ Home
     @foreach($pengumuman as $x)
     <div class="bg-pri-100 md:col-span-2 shadow-xl text-white" data-aos="fade-down">
       <div class="flex flex-wrap lg:flex-no-wrap">
-        <img class="h-56 lg:h-64 w-full lg:w-auto object-cover" src="https://img.freepik.com/free-vector/megaphone-announcement-with-paper-art-style_67590-497.jpg?size=626&ext=jpg" alt="">
+        <img class="h-56 lg:h-64 w-full lg:w-auto object-cover" src="{{ Voyager::image($x->image) }}" alt="">
         <div class="flex">
           <div class="p-8">
             <h1 class="font-semibold text-2xl lg:text-4xl">{{$x->title}}</h1>
