@@ -99,9 +99,9 @@
           </div>
           @foreach($suggestions as $suggest)
           <div class="pt-5 flex flex-col justify-start">
-            <h3 class="pb-2 text-sm font-semibold text-pri-100 capitalize">{{$suggest->title}}</h3>
-            <p class="text-sm text-gray-600 truncate-3-lines">{{$suggest->excerpt}}</p>
-            <hr class="border-1 mt-5 block">
+            <a href="{{$suggest->slug}}">
+              <h3 class="pb-2 text-sm font-semibold text-pri-100 capitalize">{{$suggest->title}}</h3>
+            </a>
           </div>
           @endforeach
           {{-- <div class="pt-5 flex flex-col justify-start">
@@ -115,22 +115,22 @@
                   <hr class="border-1 mt-5 block">
                 </div> --}}
 
-          {{-- <div class="pt-8 text-sm">
+          <div class="pt-8 text-sm">
             <h2 class="font-semibold text-pri-100">Category</h2>
             <ul class="pt-3 text-gray-600 text-left">
               <li class="pt-2">
                 <a class="hover:text-gray-800" href="{{AppAlbum::getSlug('category', $category->slug)}}">
-          <span>
-            <i class="fas fa-tag"></i>
-          </span>
-          <span class="ml-2 capitalize">{{$category->name}}</span>
-          </a>
-          </li>
-          </ul>
-        </div> --}}
+                  <span>
+                    <i class="fas fa-tag"></i>
+                  </span>
+                  <span class="ml-2 capitalize">{{$category->name}}</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
   </div>
 </section>
 @endsection
