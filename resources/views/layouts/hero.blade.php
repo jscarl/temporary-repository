@@ -24,7 +24,7 @@
 
     </div>
 
-    <div class="flex justify-center items-center">
+    <div class="justify-center items-center hidden md:flex">
       <div class="mb-64 pb-64 xl:mb-64 xl:pb-6 mx-auto absolute z-20 block uppercase overflow-hidden" data-glide-el="controls">
 
         <button class="hover:bg-white text-white hover:text-pri-100 bg-pri-100 glide__arrow--left rounded-full mx-3 lg:mx-6  w-10 h-10 cursor-pointer focus:outline-none" data-glide-dir="<">

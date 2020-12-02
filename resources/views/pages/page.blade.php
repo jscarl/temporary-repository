@@ -26,13 +26,13 @@
 
 <nav class="py-3 flex justify-center text-sm lg:text-lg items-center mx-auto lg:py-4">
   <ul class="flex items-center flex-wrap">
-    <li>
-      <a href="{{URL::to('/')}}" class="text-pri-100 hover:text-pri-200 font-semibold md:font-bold">Home</a>
+    <li class="pb-1">
+      <a href="{{URL::to('/')}}" class="text-pri-100 hover:text-pri-200 font-semibold md:font-bold pb-4">Home</a>
       <span class="px-2">
         <i style="font-size: 10px;" class="fas fa-chevron-right text-gray-500"></i>
       </span>
     </li>
-    <li>
+    <li class="pb-1">
       <p class="text-gray-500 capitalize">{{$data->title}}</p>
     </li>
   </ul>
