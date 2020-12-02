@@ -19,26 +19,26 @@ Daftar Semua Event
 <!-- End of Breadcumb -->
 <nav class="py-3 lg:py-0 flex justify-center text-sm lg:text-lg items-center mx-auto bg-gray-200 lg:bg-transparent lg:mt-6">
   <ul class="flex items-center flex-wrap">
-    <li class="pb-1">
-      <a href="{{URL::to('/')}}" class="text-pri-100 hover:text-pri-200 font-semibold md:font-bold pb-4">Home</a>
+    <li>
+      <a href="{{URL::to('/')}}" class="text-pri-100 hover:text-pri-200 font-semibold md:font-bold">Home</a>
       <span class="px-2">
         <i style="font-size: 10px;" class="fas fa-chevron-right text-gray-500"></i>
       </span>
     </li>
-    <li class="pb-1">
+    <li>
       <p class="text-gray-500 capitalize">{{ $segment }}</p>
     </li>
   </ul>
 </nav>
 {{-- ISINYA --}}
-<section class="bg-white px-4 sm:px-8 lg:px-12 xl:px-40 py-16">
+<section class="bg-white py-12 xl:pt-16 xl:pb-24 px-8 md:px-10 lg:px-12 xl:px-40">
   <div class="container mx-auto max-w-screen-xl">
     <div class="flex flex-wrap justify-center lg:justify-start -mx-2">
       @foreach($events as $event)
       <div class="max-w-sm lg:max-w-xl sm:w-1/2 lg:w-1/3 p-3">
         <div class="bg-white max-w-full shadow-xl rounded-md overflow-hidden relative">
-          <a href="#">
-            <img class="object-cover lg:h-48 h-56 w-full bg-center" src="{{Voyager::image($event->thumbnail('medium'))}}" alt="{{$event->title}}">
+          <a href="{{AppAlbum::getSlug('events', $event->slug)}}">
+            <img class="object-cover lg:h-48 h-56 w-full bg-center" src="{{Voyager::image($event->image)}}" alt="{{$event->title}}">
           </a>
           <div class="flex flex-wrap p-5">
             <a href="{{AppAlbum::getSlug('events', $event->slug)}}">
