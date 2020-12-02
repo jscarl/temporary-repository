@@ -37,11 +37,11 @@ Posts
       @foreach($posts as $post)
       <div class="max-w-sm lg:max-w-xl sm:w-1/2 lg:w-1/3 p-3">
         <div class="bg-white max-w-full shadow-xl rounded-md overflow-hidden relative">
-          <a href="{{AppAlbum::getSlug('events', $event->slug)}}">
+          <a href="{{AppAlbum::getSlug('posts', $post->slug)}}">
             <img class="object-cover lg:h-48 h-56 w-full bg-center" src="{{Voyager::image($post->image)}}" alt="{{$post->title}}">
           </a>
           <div class="flex flex-wrap p-5">
-            <a href="{{AppAlbum::getSlug('events', $event->slug)}}">
+            <a href="{{AppAlbum::getSlug('posts', $post->slug)}}">
               <h1 class="text-pri-100 font-semibold pb-3 capitalize">{{$post->title}}</h1>
             </a>
             <p class="truncate-5-lines text-sm text-gray-700">{{ $post->excerpt }}</p>
