@@ -161,7 +161,7 @@ Home
     @foreach($pengumuman as $x)
     <div class="bg-pri-100 md:col-span-2 shadow-xl text-white" data-aos="fade-down">
       <div class="flex flex-wrap lg:flex-no-wrap">
-        <img class="h-56 lg:h-auto w-full lg:w-2/5 object-cover" src="{{ Voyager::image($x->image) }}" alt="">
+        <img class="h-56 lg:h-auto w-full lg:w-2/5 object-cover" src="{{ Voyager::image($x->image)}}" alt="">
         <div class="flex">
           <div class="p-8">
             <a href="{{AppAlbum::getSlug('posts', $x->slug)}}">

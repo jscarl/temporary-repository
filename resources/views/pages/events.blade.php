@@ -5,7 +5,7 @@ Daftar Semua Event
 
 @section('content')
 <!-- Breadcumb Section -->
-<section style="background-image: url('https://www.teachforamerica.org/sites/default/files/styles/landscape_large/public/2020-06/200605_TopStory_FutureEd3.jpg'); transform: translateZ(-1px); overflow:hidden" class="breadcumb relative bg-blue-500 bg-center md:bg-bottom lg:bg-fixed bg-cover bg-no-repeat overflow-x-hidden flex justify-center items-center">
+<section style="background-image: url('{{Voyager::image($event->image)}}'); transform: translateZ(-1px); overflow:hidden" class="breadcumb relative bg-blue-500 bg-center md:bg-bottom lg:bg-fixed bg-cover bg-no-repeat overflow-x-hidden flex justify-center items-center">
   <span class="absolute w-auto inset-0 shadow-inner bg-gradient-to-bl from-pri-100 via-pri-200 to-teal-500 opacity-75"></span>
   <div class="container absolute my-auto flex flex-wrap justify-center">
     <div class="w-full mx-auto lg:px-16 xl:px-40 2xl:px-64" data-aos="fade-up">
