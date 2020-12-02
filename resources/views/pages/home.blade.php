@@ -161,10 +161,10 @@ Home
     @foreach($pengumuman as $x)
     <div class="bg-pri-100 md:col-span-2 shadow-xl text-white" data-aos="fade-down">
       <div class="flex flex-wrap lg:flex-no-wrap">
-        <img class="h-56 lg:h-64 w-full lg:w-auto object-cover" src="{{ Voyager::image($x->image) }}" alt="">
+        <img class="h-56 lg:h-auto w-full lg:w-2/5 object-cover" src="{{ Voyager::image($x->image) }}" alt="">
         <div class="flex">
           <div class="p-8">
-            <h1 class="font-semibold text-2xl lg:text-4xl">{{$x->title}}</h1>
+            <h1 class="font-semibold text-2xl lg:text-3xl leading-tight">{{$x->title}}</h1>
             <div class="flex items-center text-sm opacity-75">
               <span>
                 <i class="far fa-calendar-alt"></i>
@@ -175,9 +175,9 @@ Home
               </span>
             </div>
             <span>
-              <p class="mt-2 truncate-3-lines text-sm text-white">{{$x->excerpt}}</p>
+              <p class="mt-2 md:mt-4 truncate-3-lines text-sm text-white">{{$x->excerpt}}</p>
             </span>
-            <a class="pt-5 inline-block hover:text-pri-200 text-sm" href="{{AppAlbum::getSlug('posts', $x->slug)}}">Read More</a>
+            <a class="pt-4 inline-block hover:text-pri-200 text-sm" href="{{AppAlbum::getSlug('posts', $x->slug)}}">Read More</a>
           </div>
         </div>
       </div>
