@@ -40,7 +40,7 @@
                   </span>
                 </li>
                 <li class="pb-1">
-                  <a href="{{AppAlbum::getSlug('events', $event->slug)}}" class="text-pri-100 hover:text-pri-200 font-semibold md:font-bold pb-4 capitalize">{{$category->name}}</a>
+                  <a href="{{AppAlbum::getSlug('category', $category->slug)}}" class="text-pri-100 hover:text-pri-200 font-semibold md:font-bold pb-4 capitalize">{{$category->name}}</a>
                 <span class="px-2">
                   <i style="font-size: 10px;" class="fas fa-chevron-right text-sm text-gray-500"></i>
                 </span>
