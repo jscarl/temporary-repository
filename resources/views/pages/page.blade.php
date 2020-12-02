@@ -40,7 +40,7 @@
 
 <section class="bg-white py-12 xl:pt-16 xl:pb-24 px-8 md:px-10 lg:px-12 xl:px-40">
   <div class="container mx-auto max-w-screen-xl">
-    <div class="prose prose-sm sm:prose lg:prose-sm xl:prose-lg mx-auto md:max-w-none">
+    <div class="prose prose-sm sm:prose lg:prose-sm xl:prose-lg md:max-w-none">
       {{-- <img class="pb-8 w-full" src="{{Voyager::image($data->image)}}" alt="{{$data->title}}"> --}}
       {{-- <div class="pb-3">{!! $data->body !!}</div> --}}
       {!! $data->body !!}

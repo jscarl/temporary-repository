@@ -3,22 +3,22 @@
     <div class="sm:w-1/2 lg:w-1/5">
       <h5 class="uppercase tracking-wider font-semibold">Profil Sekolah</h5>
       <ul class="mt-4">
-        <li class="mt-2"><a href="#" title="" class="opacity-75 hover:opacity-100">Sejarah</a></li>
-        <li class="mt-2"><a href="#" title="" class="opacity-75 hover:opacity-100">Visi & Misi</a></li>
-        <li class="mt-2"><a href="#" title="" class="opacity-75 hover:opacity-100">Mars Lagu Sekolah</a></li>
-        <li class="mt-2"><a href="#" title="" class="opacity-75 hover:opacity-100">Guru & Karyawan</a></li>
-        <li class="mt-2"><a href="#" title="" class="opacity-75 hover:opacity-100">Fasilitas</a></li>
-        <li class="mt-2"><a href="#" title="" class="opacity-75 hover:opacity-100">Kegiatan Sekolah</a></li>
+        <li class="mt-2"><a href="https://sdmarsudirinigedangan.sch.id/page/sejarah" title="" class="opacity-75 hover:opacity-100">Sejarah</a></li>
+        <li class="mt-2"><a href="https://sdmarsudirinigedangan.sch.id/page/visi-dan-misi" title="" class="opacity-75 hover:opacity-100">Visi & Misi</a></li>
+        <li class="mt-2"><a href="https://sdmarsudirinigedangan.sch.id/page/values" title="" class="opacity-75 hover:opacity-100">Slogan Sekolah</a></li>
+        <li class="mt-2"><a href="https://sdmarsudirinigedangan.sch.id/page/mars-sekolah" title="" class="opacity-75 hover:opacity-100">Mars Lagu Sekolah</a></li>
+        <li class="mt-2"><a href="https://sdmarsudirinigedangan.sch.id/page/guru-dan-karyawan" title="" class="opacity-75 hover:opacity-100">Guru & Karyawan</a></li>
+        <li class="mt-2"><a href="https://sdmarsudirinigedangan.sch.id/gallery/fasilitas" title="" class="opacity-75 hover:opacity-100">Fasilitas</a></li>
       </ul>
     </div>
 
     <div class="w-full mt-8 sm:w-1/2 sm:mt-0 lg:w-1/5 lg:mt-0">
       <h5 class="uppercase tracking-wider font-semibold">Useful Link</h5>
       <ul class="mt-4">
-        <li class="mt-2"><a href="#" title="" class="opacity-75 hover:opacity-100">Pendaftaran Siswa Baru</a></li>
-        <li class="mt-2"><a href="#" title="" class="opacity-75 hover:opacity-100">Kurikulum</a></li>
-        <li class="mt-2"><a href="#" title="" class="opacity-75 hover:opacity-100">Kalender Kegiatan</a></li>
-        <li class="mt-2"><a href="#" title="" class="opacity-75 hover:opacity-100">Alumni</a></li>
+        <li class="mt-2"><a href="https://sdmarsudirinigedangan.sch.id/page/pendaftaran-siswa-baru" title="" class="opacity-75 hover:opacity-100">Pendaftaran Siswa Baru</a></li>
+        <li class="mt-2"><a href="https://sdmarsudirinigedangan.sch.id/page/kurikulum" title="" class="opacity-75 hover:opacity-100">Kurikulum</a></li>
+        <li class="mt-2"><a href="https://sdmarsudirinigedangan.sch.id/events" title="" class="opacity-75 hover:opacity-100">Event Sekolah</a></li>
+        <li class="mt-2"><a href="https://sdmarsudirinigedangan.sch.id/category/berita-sekolah" title="" class="opacity-75 hover:opacity-100">Berita Sekolah</a></li>
       </ul>
     </div>
 
@@ -70,7 +70,11 @@
 
     <div class="w-full mt-8 sm:w-1/2 sm:mt-12 lg:w-1/5 lg:mt-0 -ml-2 lg:ml-0">
       <div class="grid justify-center md:justify-start lg:justify-center grid-col-1 lg:-mr-8">
-        <div class=""><img class="w-40 lg:w-32" src="{{ asset('storage/'.setting('site.logo')) }}" alt=""></div>
+        <div>
+          <a href="{{URL::to('/')}}">
+            <img class="w-40 lg:w-32" src="{{ asset('storage/'.setting('site.logo')) }}" alt="">
+          </a>
+        </div>
         <div class="flex justify-center px-0">
           <ul class="mt-8 flex">
             <li>
