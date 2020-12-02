@@ -99,7 +99,9 @@ Post
           </div>
           @foreach($suggestions as $suggest)
           <div class="pt-5 flex flex-col justify-start">
-            <h3 class="pb-2 text-sm font-semibold text-pri-100 capitalize">{{$suggest->title}}</h3>
+            <a href="{{$suggest->slug}}">
+              <h3 class="pb-2 text-sm font-semibold text-pri-100 capitalize">{{$suggest->title}}</h3>
+            </a>
             <p class="text-sm text-gray-600 truncate-3-lines">{{$suggest->excerpt}}</p>
             <hr class="border-1 mt-5 block">
           </div>
