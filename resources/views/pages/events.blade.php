@@ -17,7 +17,7 @@ Daftar Semua Event
   </div>
 </section>
 <!-- End of Breadcumb -->
-<nav class="py-3 lg:py-0 flex justify-center text-sm lg:text-lg items-center mx-auto bg-gray-200 lg:bg-transparent lg:mt-6">
+<nav class="py-3 flex justify-center text-sm lg:text-lg items-center mx-auto lg:py-4">
   <ul class="flex items-center flex-wrap">
     <li>
       <a href="{{URL::to('/')}}" class="text-pri-100 hover:text-pri-200 font-semibold md:font-bold">Home</a>
