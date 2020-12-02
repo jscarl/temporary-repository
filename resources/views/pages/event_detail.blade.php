@@ -52,7 +52,7 @@
             </nav>
             <img class="pb-8" src="{{Voyager::image($event->image)}}" alt="">
             {{-- <h1 class="text-2xl font-bold pb-3">Introduction</h1> --}}
-            <article class="prose prose-sm sm:prose lg:prose-sm xl:prose-lg mx-auto md:max-w-none">
+            <article class="prose prose-sm sm:prose lg:prose-sm xl:prose-lg md:max-w-none">
               {!! $event->body !!}
             </article>
           </div>
