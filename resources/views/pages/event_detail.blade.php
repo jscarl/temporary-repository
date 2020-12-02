@@ -115,6 +115,7 @@
                   <hr class="border-1 mt-5 block">
                 </div> --}}
           <hr class="border-1 mt-5 block">
+          {{--
           <div class="pt-8 text-sm">
             <h2 class="font-semibold text-pri-100">Category</h2>
             <ul class="pt-3 text-gray-600 text-left">
@@ -127,7 +128,7 @@
                 </a>
               </li>
             </ul>
-          </div>
+          </div>--}}
         </div>
       </div>
     </div>
