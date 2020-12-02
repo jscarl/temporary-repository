@@ -164,7 +164,9 @@ Home
         <img class="h-56 lg:h-auto w-full lg:w-2/5 object-cover" src="{{ Voyager::image($x->image) }}" alt="">
         <div class="flex">
           <div class="p-8">
-            <h1 class="font-semibold text-2xl lg:text-3xl leading-tight">{{$x->title}}</h1>
+            <a href="{{AppAlbum::getSlug('posts', $x->slug)}}">
+              <h1 class="font-semibold text-2xl lg:text-3xl leading-tight">{{$x->title}}</h1>
+            </a>
             <div class="flex items-center text-sm opacity-75">
               <span>
                 <i class="far fa-calendar-alt"></i>
