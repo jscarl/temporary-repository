@@ -56,5 +56,6 @@
     , once: false
   , });
 
+  lightGallery(document.getElementById('lightgallery'));
 </script>
 @endsection
