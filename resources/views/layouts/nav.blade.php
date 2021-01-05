@@ -20,6 +20,7 @@
         </button>
       </div>
       <nav :class="{'flex': open, 'hidden': !open}" id="nav" class="hidden flex-col flex-grow bg-pri-100 py-2 lg:py-0 rounded-lg lg:shadow-none lg:bg-transparent lg:pb-0 lg:flex lg:justify-end lg:flex-row mt-2 lg:-mr-4 lg:m-0 mb-4 mx-1">
+        {{-- error disini --}}
         @foreach($items as $item)
         @if($item->children->count())
         <div @click.away="open = false" class="relative my-auto" x-data="{ open: false }">
